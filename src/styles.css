@@ -2911,7 +2911,8 @@ hr {
     width: 100%;
     border-radius: 5px;
     transform: scale(1);
-    transition: all 0.5s ease-out 0s
+    transition: all 0.5s ease-out 0s;
+    height: 320px;
 }
 
 .trending-area .trending-main .trending-bottom .single-bottom .trend-bottom-cap span {
