@@ -10,7 +10,8 @@
                                 <img src="{{newsStandard.img}}" alt="">
                                 <div class="trend-top-cap">
                                     <span>{{newsStandard.hat}}</span>
-                                    <h2><a href="{{newsStandard.link}}">{{newsStandard.title}}</a></h2>
+                                    <h2><a [routerLink]="['/noticias',newsStandard.slug]">{{newsStandard.title}}</a>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -24,7 +25,7 @@
                                         </div>
                                         <div class="trend-bottom-cap">
                                             <span class="color3">{{news.hat}}</span>
-                                            <h4><a href="{{news.link}}">{{news.title}}</a></h4>
+                                            <h4><a [routerLink]="['/noticias',news.slug]">{{news.title}}</a></h4>
                                         </div>
                                     </div>
                                 </div>

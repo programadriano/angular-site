@@ -5,6 +5,7 @@ export class News {
     text?: String;
     author?: String;
     img?: String;
+    slug?: String;
     publishDate?: Date;
     link?: String;
     status?: Number;
