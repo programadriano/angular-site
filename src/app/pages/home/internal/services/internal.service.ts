@@ -14,7 +14,7 @@ export class InternalService {
   constructor(private http: HttpClient, private httpUtil: HttpUtilService) { }
 
   getNewsBySlug(slug: string) {
-    return this.http.get(this.API_URL + `news/GetNewsBySlug?slug=${slug}`)
+    return this.http.get(this.API_URL + `NewsExternal/${slug}`)
       .pipe(map(this.httpUtil.extrairDados))
       .pipe(
         retryWhen(errors => errors.pipe(delay(1000), take(10))),
