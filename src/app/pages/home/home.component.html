@@ -36,5 +36,35 @@
             </div>
         </div>
     </div>
+    <div class="weekly2-news-area  weekly2-pading gray-bg">
+        <div class="container">
+            <div class="weekly2-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle mb-30">
+                            <h3>Últimos vídeos</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="weekly2-news-active dot-style d-flex dot-style">
+                            <div *ngFor="let video of videoList" class="weekly2-single">
+                                <div class="weekly2-img">
+                                    <img src="{{video.thumbnail}}" alt="{{video.title}}">
+                                </div>
+                                <div class="weekly2-caption">
+                                    <span class="color1">{{video.hat}}</span>
+                                    <p>{{video.publishDate}}</p>
+                                    <h4><a [routerLink]="['/videos',video?.slug]">{{video.title}}</a></h4>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
