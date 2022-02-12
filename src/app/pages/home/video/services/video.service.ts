@@ -24,7 +24,7 @@ export class VideoService {
 
   
   getVideosBySlug(slug: string) {
-    return this.http.get(this.API_URL + `VideoExternal?slug=${slug}`)
+    return this.http.get(this.API_URL + `VideoExternal/${slug}`)
       .pipe(map(this.httpUtil.extrairDados))
       .pipe(
         retryWhen(errors => errors.pipe(delay(1000), take(10))),
