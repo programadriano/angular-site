@@ -7,6 +7,7 @@ import { InternalComponent } from './internal/internal.component';
 import { NewsComponent } from './news/news.component';
 import { VideoComponent } from './video/video.component';
 import { VimeModule } from '@vime/angular';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { VimeModule } from '@vime/angular';
     HomeComponent,
     InternalComponent,
     NewsComponent,
-    VideoComponent
+    VideoComponent,
+    GalleryComponent
   ],
   imports: [
     CommonModule,
