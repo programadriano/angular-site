@@ -14,14 +14,35 @@ export class GalleryComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private _galleryService: GalleryService) { }
   public gallery: Gallery = new Gallery();
 
+  imageObject: Array<object> = [];
+
   ngOnInit(): void {
+
     let slug = this.activatedRoute.snapshot.params.slug;
     this.getGalleryBySlug(slug);
   }
 
   getGalleryBySlug(slug: string) {
-    this._galleryService.getGalleryBySlug(slug).subscribe(data => {
+
+    this._galleryService.getGalleryBySlug(slug).subscribe((data: Gallery) => {
       this.gallery = data;
+      
+      data.galleryImages?.forEach(img => {
+
+        let element = {
+          image: img,
+          thumbImage: img,
+          alt: '',
+          title: this.gallery.title
+        };
+        console.log(element, 'HERE');
+
+        this.imageObject.push(element);
+
+      });
+
+
+
     });
   }
 

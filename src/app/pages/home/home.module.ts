@@ -8,6 +8,7 @@ import { NewsComponent } from './news/news.component';
 import { VideoComponent } from './video/video.component';
 import { VimeModule } from '@vime/angular';
 import { GalleryComponent } from './gallery/gallery.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { GalleryComponent } from './gallery/gallery.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    VimeModule
+    VimeModule,
+    NgImageSliderModule    
   ]
 })
+
 export class HomeModule { }

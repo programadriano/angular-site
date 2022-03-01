@@ -9,7 +9,7 @@ export class Gallery {
     slug?: String;
     publishDate?: Date;
     status?: Number;
-    galleryImages?: Array<string> | undefined;
+    galleryImages?: Array<string> = [];
 
 }
 

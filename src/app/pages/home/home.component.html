@@ -52,11 +52,11 @@
                         <div class="weekly2-news-active dot-style d-flex dot-style">
                             <div *ngFor="let video of videoList" class="weekly2-single">
                                 <div class="weekly2-img">
-                                    <img src="{{video.thumbnail}}" alt="{{video.title}}">
+                                    <img style="height:200px" src="{{video.thumbnail}}" alt="{{video.title}}">
                                 </div>
                                 <div class="weekly2-caption">
                                     <span class="color1">{{video.hat}}</span>
-                                    <p>{{video.publishDate}}</p>
+                                    <p>{{video.publishDate | date: 'dd/MM/yyyy'}}</p>
                                     <h4><a [routerLink]="['/videos',video?.slug]">{{video.title}}</a></h4>
 
                                 </div>
@@ -81,15 +81,15 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="recent-active dot-style d-flex dot-style">
-                            <div class="single-recent mb-100" *ngFor="let gallery of galleryList" >
+                            <div class="single-recent mb-100" *ngFor="let gallery of galleryList">
                                 <div class="what-img">
                                     <img [src]="gallery.thumb" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <span class="color1">{{gallery.publishDate}}</span>
+                                    <span class="color1">{{gallery.publishDate | date: 'dd/MM/yyyy'}}</span>
                                     <h4><a [routerLink]="['/galeria',gallery?.slug]">{{gallery.title}}</a></h4>
                                 </div>
-                            </div>                           
+                            </div>
                         </div>
                     </div>
                 </div>

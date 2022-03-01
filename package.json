@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-slider/ngx-slider": "^2.0.4",
     "@angular/animations": "~12.1.0",
     "@angular/common": "~12.1.0",
     "@angular/compiler": "~12.1.0",
@@ -22,6 +23,7 @@
     "@vime/angular": "^5.3.1",
     "@vime/core": "^5.3.1",
     "bootstrap": "^5.1.3",
+    "ng-image-slider": "^2.8.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "video.js": "^7.17.0",
